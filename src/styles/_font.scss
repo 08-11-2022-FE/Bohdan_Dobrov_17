@@ -1,0 +1,10 @@
+$font-railway: 'Raleway', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-open: 'Open Sans', sans-serif;
+
+@mixin font-style($weight, $size, $height, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}

@@ -1,0 +1,208 @@
+// connected _font.scss
+@use 'font';
+
+$style-color: #FFCC00;
+$social-color: #CCCCCC;
+$attend: 5px;
+
+%uppercase {
+    text-transform: uppercase;
+}
+
+.container {
+    width: 1170px;
+    margin: 120px auto;
+}
+
+.section-main {
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+
+    .section-header__text {
+        font-family: font.$font-railway;
+        @include font.font-style(500, 18px, 24px, #898F8F);
+        margin-bottom: $attend * 3;
+        @extend %uppercase;
+    }
+
+    .section-header__title {
+        font-family: font.$font-roboto;
+        @include font.font-style(900, 60px, 99px, $style-color);
+        margin-bottom: $attend * 8;
+        @extend %uppercase;
+    }
+
+    .section-header__divider {
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $attend * 8;
+    }
+
+    .line {
+        width: 210px;
+        height: 1px;
+        background-color: $style-color;
+    }
+
+    .bonfire {
+        fill: $style-color;
+    }
+}
+
+.section-main {
+    display: flex;
+    gap: 170px;
+    margin-left: $attend * 14;
+    margin-right: $attend * 14;
+    padding: 65px 0;
+}
+
+.foto {
+    width: 430px;
+    padding: $attend * 3;
+    position: relative;
+
+    .vertical-line {
+        width: 100px;
+        height: 1px;
+        background-color: $style-color;
+        position: absolute;
+    }
+
+    .horizontal-line {
+        width: 1px;
+        height: 100px;
+        background-color: $style-color;
+        position: absolute;
+    }
+
+    .line-r-top {
+        top: 0;
+        right: 0;
+    }
+
+    .line-l-top {
+        top: 0;
+        left: 0;
+    }
+
+    .line-r-bot {
+        bottom: 0;
+        right: 0;
+    }
+
+    .line-l-bot {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.about {
+    text-align: center;
+
+    .about__info {
+        position: relative;
+    }
+
+    .about__title {
+        font-family: font.$font-roboto;
+        @include font.font-style(900, 36px, 34px, #666666);
+        margin-bottom: $attend * 12;
+    }
+
+    .about__text {
+        font-family: font.$font-railway;
+        @include font.font-style(400, 24px, 28px, #666666);
+    }
+
+    .about__line {
+        width: 100px;
+        height: 1px;
+        background-color: $style-color;
+        position: absolute;
+        left: 166px;
+        bottom: 57px;
+    }
+
+    .about__text-bottom {
+        width: 430px;
+        font-family: font.$font-railway;
+        @include font.font-style(500, 14px, 24px, #333333);
+    }
+
+    .about__button {
+        font-family: font.$font-open;
+        @include font.font-style(700, 14px, 14px, #666666);
+        background-color: white;
+        @extend %uppercase;
+        padding: 5px 10px;
+        border: 1px solid $style-color;
+    }
+}
+
+.about__social {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: $attend * 6;
+    margin-bottom: 49px;
+
+    .about__link {
+        display: block;
+    }
+
+    .about__item {
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $social-color;
+        border-radius: 50%;
+    }
+    
+    .about__svg {
+        width: 30px;
+        height: 30px;
+        fill: $social-color;
+    }
+
+    .about__item:hover {
+        border-color: $style-color;
+    }
+
+    .about__item:hover .about__svg {
+        fill: $style-color;
+    }
+}
+
+.dashed-divider {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0;
+
+    .dashed-divider__small {
+        width: 10px;
+        height: 4px;
+        background-color: $style-color;
+    }
+
+    .dashed-divider__big {
+        width: 20px;
+        height: 4px;
+        background-color: $style-color;
+    }
+}
+
+.center-divider {
+    height: 100%;
+    width: 1px;
+    background-color: $style-color;
+    position: absolute;
+    top: 0;
+    left: 515px;
+}
