@@ -3,6 +3,7 @@
 
 $style-color: #FFCC00;
 $social-color: #CCCCCC;
+$attend: 5px;
 
 %uppercase {
     text-transform: uppercase;
@@ -23,14 +24,14 @@ $social-color: #CCCCCC;
     .section-header__text {
         font-family: font.$font-railway;
         @include font.font-style(500, 18px, 24px, #898F8F);
-        margin-bottom: 15px;
+        margin-bottom: $attend * 3;
         @extend %uppercase;
     }
 
     .section-header__title {
         font-family: font.$font-roboto;
         @include font.font-style(900, 60px, 99px, $style-color);
-        margin-bottom: 40px;
+        margin-bottom: $attend * 8;
         @extend %uppercase;
     }
 
@@ -39,7 +40,7 @@ $social-color: #CCCCCC;
         gap: 6px;
         justify-content: center;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: $attend * 8;
     }
 
     .line {
@@ -56,14 +57,14 @@ $social-color: #CCCCCC;
 .section-main {
     display: flex;
     gap: 170px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: $attend * 14;
+    margin-right: $attend * 14;
     padding: 65px 0;
 }
 
 .foto {
     width: 430px;
-    padding: 15px;
+    padding: $attend * 3;
     position: relative;
 
     .vertical-line {
@@ -111,7 +112,7 @@ $social-color: #CCCCCC;
     .about__title {
         font-family: font.$font-roboto;
         @include font.font-style(900, 36px, 34px, #666666);
-        margin-bottom: 60px;
+        margin-bottom: $attend * 12;
     }
 
     .about__text {
@@ -148,7 +149,7 @@ $social-color: #CCCCCC;
     display: flex;
     justify-content: center;
     gap: 5px;
-    margin-top: 30px;
+    margin-top: $attend * 6;
     margin-bottom: 49px;
 
     .about__link {
